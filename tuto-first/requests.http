@@ -1,0 +1,10 @@
+### App resuest
+
+GET http://localhost:3000/
+
+### All Message request
+
+GET http://localhost:3000/message/
+
+### select Message request
+GET http://localhost:3000/message/1
