@@ -8,7 +8,7 @@ export class MessageService {
         return "tous les messages";
     }
 
-    async getMessage(id: string): Promise<string> {
+    async getMessage(id: number): Promise<string> {
         return "message avec id: " + id;
     }
 

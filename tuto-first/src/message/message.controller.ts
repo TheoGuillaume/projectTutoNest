@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, ParseIntPipe, Post } from '@nestjs/common';
 import { MessageService } from './message.service';
 import { MessageDto } from 'src/models/messages.models';
 
@@ -14,7 +14,7 @@ export class MessageController {
     } 
 
     @Get(":id")
-    async getMessage(@Param('id') id: string): Promise<string> {
+    async getMessage(@Param('id', ParseIntPipe) id: number): Promise<string> {
         const data = await this.messageService.getMessage(id);
         return data
     }
